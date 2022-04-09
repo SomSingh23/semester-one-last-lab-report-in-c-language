@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
     int i;
     struct product p[10];
     
-    for(i = 0; i < 2; ++i){
+    for(i = 0; i < 3; ++i){
         printf("\nEnter the details of product %d",i+1);
         printf("\nName: ");
         scanf("%s",p[i].name);
@@ -27,9 +27,23 @@ int main(int argc, char *argv[]) {
     FILE *fptr = NULL;
     fptr = fopen("storing_data.txt","w"); 
     
-
-
-    for(i = 0; i < 2; ++i){
+//printf("---------- Storing Data with respect to PRICE in ascending order ----------\n\n");
+// sorting data wrt to price in ascending order !!
+int swap ; int lol , lol2 ;
+for(int i = 0 ; i<3  ; i++){
+  swap = 0 ; // become 1 when swaping happen
+  for(int j = i ; j<3 ; j++){
+    if(p[j].price<p[i].price){
+struct product new = p[j] ;
+p[j] = p[i] ;
+p[i] = new ;
+swap = 1 ;
+    }
+  }
+  if(swap==0) {break;}
+} fprintf(fptr , "---------- Storing Data with respect to PRICE in ascending order ----------\n\n");
+    for(i = 0; i < 3; ++i){
+     
         fprintf(fptr,"The details of product %d are:\n",i+1);
         fprintf(fptr,"Name -> %s\n",p[i].name);
         fprintf(fptr,"Price -> %.2f\n",p[i].price);
