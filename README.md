@@ -1,6 +1,6 @@
 ## **Semester 1 (First Year)** final computer _lab report_
 
-### Most to the (95%) is done by `Shashank Grag` later sorting added by `Me` .
+### Most to the (70%) is done by `Shashank Grag` later sorting added by `Me` .
 
 ### **What** does the code do ??
 
